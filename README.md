@@ -1,4 +1,4 @@
-# Ex.No:2 To create a HelloWorld Activity using all lifecycles methods to display messages.
+# Ex.No:1 To create a HelloWorld Activity using all lifecycles methods to display messages.
 
 
 ## AIM:
@@ -29,14 +29,119 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by: Laksha M
+Registeration Number : 212224220050
 */
+```
+MainActivity
+
+```
+package com.example.lifecyclemethod;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast toast = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStart() {
+        super.onStart();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+        Toast toast = Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onPause() {
+        super.onPause();
+        Toast toast = Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        Toast toast = Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStop() {
+        super.onStop();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast toast = Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+}
+```
+
+XML
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#375AE0"
+        android:textColorLink="#283DA4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lifecycle methods in Android"
+        android:textColor="#DC0909"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 ## OUTPUT
 
+<img width="1919" height="1079" alt="Screenshot 2026-07-23 211907" src="https://github.com/user-attachments/assets/2f57d9c4-7df0-4423-9fee-18d488700b24" />
 
+<img width="1919" height="1079" alt="Screenshot 2026-07-23 211722" src="https://github.com/user-attachments/assets/972e5c3d-e475-4f8a-bdb9-1df245a72c44" />
+
+<img width="1919" height="1079" alt="Screenshot 2026-07-23 211818" src="https://github.com/user-attachments/assets/229f6319-671a-4e5e-be74-82e290509877" />
+
+<img width="1919" height="1078" alt="Screenshot 2026-07-23 211731" src="https://github.com/user-attachments/assets/b1f3e1a7-e3ef-40f1-90c7-bbcf847b0e2a" />
 
 
 ## RESULT
